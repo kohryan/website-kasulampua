@@ -1,0 +1,498 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  
+    <title>Statistik Kasulampua</title>
+
+    <meta content="Website Resmi BPS se-Kasulampua (Kalimantan, Sulawesi, Maluku, dan Papua)" name="description">
+    <meta content="data, statistik, konreg, kasulampua, kalimantan, sulawesi, maluku, papua" name="keywords">
+
+    <!-- Favicons -->
+    <link href="assets/img/favicon.png" rel="icon">
+    <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+
+     <!-- Vendor CSS Files -->
+    <link href="assets/vendor/animate.css/animate.min.css" rel="stylesheet">
+    <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+    <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+    <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+    <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+    <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+    <!-- Tambahan CSS -->
+    <link rel="stylesheet" href="assets/css/style.css"> 
+    <link rel="stylesheet" href="assets/css/chart.css">
+    <link rel="stylesheet" href="assets/css/owl.css">
+    <link rel="stylesheet" href="assets/css/animate.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.10.2/css/all.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.10.2/css/v4-shims.css">
+    <link rel="stylesheet"href="https://unpkg.com/swiper@7/swiper-bundle.min.css"/>
+
+    <script>
+    window.Promise ||
+      document.write(
+        '<script src="https://cdn.jsdelivr.net/npm/promise-polyfill@8/dist/polyfill.min.js"><\/script>'
+      )
+    window.Promise ||
+      document.write(
+        '<script src="https://cdn.jsdelivr.net/npm/eligrey-classlist-js-polyfill@1.2.20171210/classList.min.js"><\/script>'
+      )
+    window.Promise ||
+      document.write(
+        '<script src="https://cdn.jsdelivr.net/npm/findindex_polyfill_mdn"><\/script>'
+      )
+    </script>
+
+  
+    <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
+  
+
+    <script>
+    // Replace Math.random() with a pseudo-random number generator to get reproducible results in e2e tests
+    // Based on https://gist.github.com/blixt/f17b47c62508be59987b
+    var _seed = 42;
+    Math.random = function() {
+      _seed = _seed * 16807 % 2147483647;
+      return (_seed - 1) / 2147483646;
+    };
+    </script>
+</head>
+
+<body>
+    <!-- ======= Top Bar ======= -->
+    <div id="topbar" class="d-flex align-items-center fixed-top" style="background-color: black;">
+      <div class="container d-flex justify-content-center justify-content-md-between">
+
+        <div class="topnav-info d-flex align-items-center">
+          <i class="nav-link d-flex align-items-center"><a href="/glosarium.html"><span>Glosarium</span></a></i>
+          <i class="nav-link d-flex align-items-center ms-4"><a href="/sitemap.html"><span>Peta Situs</span></a></i>
+        </div>
+
+        <div class="languages d-none d-md-flex align-items-center">
+          <ul>
+            <li>ID</li>
+            <li><a href="#">EN</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- Start Header -->
+    <header id="header" class="fixed-top d-flex align-items-center" style="background-color: black;">
+        <div class="container-fluid container-xl d-flex align-items-center justify-content-lg-between">
+        <a href="index.html" class="logo me-auto me-lg-0"><img src="assets/img/kasulampualogo.svg" alt="" class="img-fluid"></a>          
+    
+          <nav id="navbar" class="navbar order-last order-lg-0">
+            <ul>
+              <li><a href="index.html">Beranda</a></li>
+              <li><a href="/berita.html">Berita</a></li>
+              <li><a href="">Statistik</a></li>
+              <li><a href="/publikasi.html">Publikasi</a></li>
+              <li><a href="/infografis.html">Infografis</a></li>
+              <li><a href="/tentang.html">Tentang</a></li>
+            </ul>
+            <i class="bi bi-list mobile-nav-toggle"></i>
+          </nav><!-- .navbar -->
+          <a href="https://wa.me/6281231007474" class="book-a-table-btn d-none d-lg-flex">Hubungi Kami</a>
+    
+        </div>
+    </header>
+    <!-- End Header -->
+
+    <main>
+      <section id="blank" class="tabel"></section>
+
+        <!-- ======= Statistik Section ======= -->
+        <section id="statistik" class="tabel">
+          <div class="container" data-aos="fade-up">
+
+            <div class="row" data-aos="fade-up" data-aos-delay="100">
+              <div class="input-group rounded" style="margin-bottom: 20px;">
+                <input type="search" class="form-control rounded" placeholder="Cari Data" aria-label="Search" aria-describedby="search-addon" />
+              </div>
+             <div class="col-lg-3">
+              <ul class="nav nav-tabs flex-column">
+                <li class="nav-item">
+                  <a class="nav-link active show" data-bs-toggle="tab" href="#tab-1">Sosial & Kependudukan</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" data-bs-toggle="tab" href="#tab-2">Ekonomi & Perbankan</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" data-bs-toggle="tab" href="#tab-3">Pertanian & Industri</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" data-bs-toggle="tab" href="#tab-4">Energi & Konstruksi</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" data-bs-toggle="tab" href="#tab-5">Perencanaan & Lainnya</a>
+                </li>
+              </ul>
+             </div>
+            
+             <div class="col-lg-9 mt-4 mt-lg-0">
+              <div class="tab-content">
+                
+                <div class="tab-pane active show" id="tab-1">
+                  <div class="row">
+                    <div class="col-lg-12 details order-2 order-lg-1">
+                      <div class="table-responsive">
+                       <table class="table">
+                         <thead style="background-color: #cda45e; color: #fff; padding: 12px 15px; font-weight: 600;
+                         font-size: 15px;">
+                          <tr>
+                            <th scope="col">Indikator</th>
+                            <th scope="col">Tahun</th>
+                          </tr>
+                         </thead>
+                         <tbody>
+                          <tr>
+                            <td><a href="#">Gini Rasio Maret</a></td>
+                            <td>2017, 2018, 2019, 2020, 2021</td>
+                          </tr>
+                          <tr>
+                            <td><a href="#">Gini Rasio Maret</a></td>
+                            <td>2017, 2018, 2019, 2020, 2021</td>
+                          </tr>
+                          <tr>
+                            <td><a href="#">Jumlah Penduduk Miskin Maret</a></td>
+                            <td>2017, 2018, 2019, 2020, 2021</td>
+                          </tr>
+                          <tr>
+                            <td><a href="#">Jumlah Penduduk Miskin September</a></td>
+                            <td>2017, 2018, 2019, 2020, 2021</td>
+                          </tr>
+                         </tbody>
+                      </table>
+                     </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="tab-pane" id="tab-2">
+                  <div class="row">
+                    <div class="col-lg-12 details order-2 order-lg-1">
+                      <div class="table-responsive">
+                       <table class="table">
+                         <thead style="background-color: #cda45e; color: #fff; padding: 12px 15px; font-weight: 600;
+                         font-size: 15px;">
+                          <tr>
+                            <th scope="col">Indikator</th>
+                            <th scope="col">Tahun</th>
+                          </tr>
+                         </thead>
+                         <tbody>
+                          <tr>
+                            <td><a href="#">Gini Rasio Maret</a></td>
+                            <td>2017, 2018, 2019, 2020, 2021</td>
+                          </tr>
+                          <tr>
+                            <td><a href="#">Gini Rasio Maret</a></td>
+                            <td>2017, 2018, 2019, 2020, 2021</td>
+                          </tr>
+                          <tr>
+                            <td><a href="#">Jumlah Penduduk Miskin Maret</a></td>
+                            <td>2017, 2018, 2019, 2020, 2021</td>
+                          </tr>
+                          <tr>
+                            <td><a href="#">Jumlah Penduduk Miskin September</a></td>
+                            <td>2017, 2018, 2019, 2020, 2021</td>
+                          </tr>
+                         </tbody>
+                      </table>
+                     </div>
+                    </div>
+                  </div>
+                </div>
+              
+              </div>
+             </div>
+            </div>
+              <nav aria-label="Page navigation example">
+                <ul class="pagination justify-content-center" style="margin: 20px 0 50px 0;">
+                  <li class="page-item">
+                    <a class="page-link" href="#" aria-label="Previous">
+                      <span aria-hidden="true">&laquo;</span>
+                      <span class="sr-only">Previous</span>
+                    </a>
+                  </li>
+                  <li class="page-item"><a class="page-link" href="#">1</a></li>
+                  <li class="page-item"><a class="page-link" href="#">2</a></li>
+                  <li class="page-item"><a class="page-link" href="#">3</a></li>
+                  <li class="page-item">
+                    <a class="page-link" href="#" aria-label="Next">
+                      <span aria-hidden="true">&raquo;</span>
+                      <span class="sr-only">Next</span>
+                    </a>
+                  </li>
+                </ul>
+              </nav>
+
+              <div class="table-responsive">
+                <table class="table" style="font-size: 13px;">
+                  <thead style="background-color: #cda45e; color: #fff; padding: 12px 15px; font-weight: 600;
+                  font-size: 15px;">
+                   <tr>
+                     <th style="width: 200px;" scope="col">Indikator</th>
+                   </tr>
+                  </thead>
+                  <tbody>
+                   <tr>
+                     <td><a href="#">IPM</a></td>
+                     <td>Indeks Pembangunan Manusia (IPM) adalah ukuran ringkas rata-rata capaian/ keberhasilan dimensi utama pembangunan manusia, yaitu: umur panjang dan hidup sehat, mempunyai pengetahuan, dan memiliki standar hidup yang layak.</td>
+                   </tr>
+                   <tr>
+                     <td><a href="#">Rasio Gini</a></td>
+                     <td>Merupakan suatu ukuran kemerataan yang dihitung dengan membandingkan luas antara diagonal dan kurva lorenz (daerah A) dibagi dengan luas segitiga di bawah diagonal. Kegunaan: Untuk mengukur derajat ketidakmerataan distribusi penduduk. Keterangan : Rasio Gini bernilai antara 0 dan 1. Nilai 1 grafiknjukkan complete inequality atau perfectly inequal, di mana seluruh penduduk menempati satu lokasi di suatu negara dan tidak ada penduduk di lokasi lainnya. Nilai 0 grafiknjukkan perfectly equal, yaitu penduduk terdistribusikan sempurna di seluruh wilayah suatu negara. Jadi, semakin besar nilai rasio konsentrasi Gini, semakin besar ketidakmerataan antara distribusi penduduk dan jumlah lokasi.</td>
+                   </tr>
+                   <tr>
+                     <td><a href="#">Penduduk Miskin</a></td>
+                     <td>Penduduk miskin adalah penduduk yang memiliki rata-rata pengeluaran per kapita per bulan di bawah Garis Kemiskinan.</td>
+                   </tr>
+                  </tbody>
+               </table>
+              </div>
+          </div>
+        </section>
+        <!-- End Statistik Section -->
+        
+
+        <!-- Data Section -->
+        <section id="grafik" class="grafik section-bg">
+          <div class="container" data-aos="fade-up">
+
+              <div class="section-title">
+                <h2>Komponen Bar Chart</h2>
+              </div>
+                  
+                  <div class="card text-center" style="padding: 10px; margin-bottom: 15px; color: #cda45e; font-weight: bold;">
+                    Multiple Bar
+                    <div class="chart" id="miskin"></div>
+                    <div style="color:rgb(129, 129, 129); font-size: small; font-weight: 300;">
+                      Sumber: <span>BPS, Susenas September 2022</span></div>
+                  </div>
+
+                  <div class="card text-center" style="padding: 10px; margin-bottom: 15px; color: #cda45e; font-weight: bold;">
+                    Single Bar
+                    <div class="chart" id="ipm"></div>
+                    <div style="color:rgb(129, 129, 129); font-size: small; font-weight: 300;">
+                      Sumber: <span>BPS, berbagai sensus dan survei</span></div>
+                  </div>
+
+                    <script> //Multiple Bar Chart
+                      var options = {
+                        series: [{
+                          name: "2017",
+                          data: [356.51, 144.52, 201.95, 242.30, 50.58, 187.33, 389.71, 782.32, 314.74, 187.35, 169.26, 296.66, 82.13, 936.32, 222.36]
+                         },{
+                          name: "2018",
+                          data: [356.51, 144.52, 201.95, 242.30, 50.58, 187.33, 389.71, 782.32, 314.74, 187.35, 169.26, 296.66, 82.13, 936.32, 222.36]
+                         },{
+                          name: "2019",
+                          data: [356.51, 144.52, 201.95, 242.30, 50.58, 187.33, 389.71, 782.32, 314.74, 187.35, 169.26, 296.66, 82.13, 936.32, 222.36]
+                         },{
+                          name: "2020",
+                          data: [356.51, 144.52, 201.95, 242.30, 50.58, 187.33, 389.71, 782.32, 314.74, 187.35, 169.26, 296.66, 82.13, 936.32, 222.36]
+                         },
+                         {
+                          name: "2021",
+                          data: [356.51, 144.52, 201.95, 242.30, 50.58, 187.33, 389.71, 782.32, 314.74, 187.35, 169.26, 296.66, 82.13, 936.32, 222.36]
+                         }],
+                        chart: {
+                          type: 'bar',
+                          height: 1500
+                        },
+                        plotOptions: {
+                          bar: {
+                          borderRadius: 4,
+                          horizontal: true, 
+                          }
+                        },
+                        dataLabels: {
+                          enabled: true //false biar tanpa label
+                        },
+                        xaxis: {
+                          categories: ["Kalimantan Barat", "Kalimantan Tengah", "Kalimantan Selatan", "Kalimantan Timur", "Kalimantan Utara", "Sulawesi Utara", "Sulawesi Tengah", "Sulawesi Selatan", "Sulawesi Tenggara", "Gorontalo", "Sulawesi Barat", "Maluku", "Maluku Utara", "Papua", "Papua Barat"],
+                        }
+                      };
+                      var chart = new ApexCharts(document.querySelector("#miskin"), options);
+                      chart.render();
+                    </script>
+
+                    <script> //Single Bar, chart lainnya: https://apexcharts.com/docs/
+                      var options = {
+                        series: [{
+                          name: "2022",
+                          data: [68.63, 71.63, 71.84, 77.44, 71.83, 73.81, 70.28, 72.82, 72.23, 69.81, 66.92, 70.22, 69.47, 61.39, 65.89]
+                         }],
+                        chart: {
+                          type: 'bar',
+                          height: 450
+                        },
+                        plotOptions: {
+                          bar: {
+                          borderRadius: 4,
+                          horizontal: true,
+                          }
+                        },
+                        fill: {
+                          colors: ['#22b3c1']
+                        },
+                        dataLabels: {
+                          enabled: true
+                        },
+                        xaxis: {
+                          categories: ["Kalimantan Barat", "Kalimantan Tengah", "Kalimantan Selatan", "Kalimantan Timur", "Kalimantan Utara", "Sulawesi Utara", "Sulawesi Tengah", "Sulawesi Selatan", "Sulawesi Tenggara", "Gorontalo", "Sulawesi Barat", "Maluku", "Maluku Utara", "Papua", "Papua Barat"],
+                        }
+                      };
+                      var chart = new ApexCharts(document.querySelector("#ipm"), options);
+                      chart.render();
+                    </script>                     
+           
+          </div>
+        </section>
+        <!-- End Data Section -->
+
+    </main>
+
+    <footer id="footer">
+      <div class="footer-top">
+        <div class="container">
+          <div class="row">
+  
+            <div class="col-lg-3 col-md-6">
+              <div class="footer-info">
+                <a href="https://sultra.bps.go.id" class="logo me-auto me-lg-0"><img src="assets/img/logobps.svg" alt="" class="img-fluid"  style="margin-bottom: 15px;"></a>
+                <p>
+                  Jl. Boulevard No. 1<br>
+                  Kendari, Sulawesi Tenggara<br><br>
+                  <strong>Telp:</strong> 08 123 100 7474<br>
+                  <strong>Email:</strong> sultra@bps.go.id<br>
+                </p>
+                <div class="social-links mt-3">
+                  <a href="https://facebook.com/bpsprovsultra" class="facebook"><i class="bx bxl-facebook"></i></a>
+                  <a href="https://instagram.com/bpsprovsultra" class="instagram"><i class="bx bxl-instagram"></i></a>
+                  <a href="https://youtube.com/bpsprovsultra" class="youtube"><i class="bx bxl-youtube"></i></a>
+                </div>
+              </div>
+            </div>
+  
+            <div class="col-lg-2 col-md-6 footer-links">
+              <h4>Tautan:</h4>
+            </div>
+  
+            <div class="col-lg-2 col-md-6 footer-links">
+              <h4>Bappeda</h4>
+              <ul>
+                <li><i class="bx bx-chevron-right"></i> <a href="http://bappeda.kalselprov.go.id" target="_blank" rel="nofollow" class="effect-shine">Kalimantan Selatan</a></li>
+							  <li><i class="bx bx-chevron-right"></i> <a href="https://bappeda.kalbarprov.go.id" target="_blank" rel="nofollow" class="effect-shine">Kalimantan Barat</a></li>
+							  <li><i class="bx bx-chevron-right"></i> <a href="http://bappeda.kalteng.go.id" target="_blank" rel="nofollow" class="effect-shine">Kalimantan Tengah</a></li>
+							  <li><i class="bx bx-chevron-right"></i> <a href="https://bappeda.kaltimprov.go.id" target="_blank" rel="nofollow" class="effect-shine">Kalimantan Timur</a></li>
+							  <li><i class="bx bx-chevron-right"></i> <a href="https://bappedalitbang.kaltaraprov.go.id/" target="_blank" rel="nofollow" class="effect-shine">Kalimantan Utara</a></li>
+                <li><i class="bx bx-chevron-right"></i> <a href="http://bappeda.sulutprov.go.id" target="_blank" rel="nofollow" class="effect-shine">Sulawesi Utara</a></li>
+							  <li><i class="bx bx-chevron-right"></i> <a href="http://bappeda.sultengprov.go.id" target="_blank" rel="nofollow" class="effect-shine">Sulawesi Tengah</a></li>
+							  <li><i class="bx bx-chevron-right"></i> <a href="https://bappelitbangda.sulselprov.go.id/" target="_blank" rel="nofollow" class="effect-shine">Sulawesi Selatan</a></li>
+							  <li><i class="bx bx-chevron-right"></i> <a href="https://bappedasultra.go.id" target="_blank" rel="nofollow" class="effect-shine">Sulawesi Tenggara</a></li>
+							  <li><i class="bx bx-chevron-right"></i> <a href="https://bappeda.gorontaloprov.go.id/" target="_blank" rel="nofollow" class="effect-shine">Gorontalo</a></li>
+							  <li><i class="bx bx-chevron-right"></i> <a href="http://bappeda.sulbarprov.go.id" target="_blank" rel="nofollow" class="effect-shine">Sulawesi Barat</a></li>
+							  <li><i class="bx bx-chevron-right"></i> <a href="https://malukuprov.go.id" target="_blank" rel="nofollow" class="effect-shine">Maluku</a></li>
+							  <li><i class="bx bx-chevron-right"></i> <a href="https://bappeda.malutprov.go.id" target="_blank" rel="nofollow" class="effect-shine">Maluku Utara</a></li>
+							  <li><i class="bx bx-chevron-right"></i> <a href="https://bappeda.papuabaratprov.go.id" target="_blank" rel="nofollow" class="effect-shine">Papua Barat</a></li>
+							  <li><i class="bx bx-chevron-right"></i> <a href="https://bappeda.papua.go.id" target="_blank" rel="nofollow" class="effect-shine">Papua</a></li>
+              </ul>
+            </div>
+  
+            <div class="col-lg-2 col-md-6 footer-links">
+              <h4>Badan Pusat Statistik</h4>
+              <ul>
+                <li><i class="bx bx-chevron-right"></i> <a href="https://kalsel.bps.go.id" target="_blank" rel="nofollow" class="effect-shine">BPS Kalimantan Selatan</a></li>
+							  <li><i class="bx bx-chevron-right"></i> <a href="https://kalbar.bps.go.id" target="_blank" rel="nofollow" class="effect-shine">BPS Kalimantan Barat</a></li>
+							  <li><i class="bx bx-chevron-right"></i> <a href="https://kalteng.bps.go.id" target="_blank" rel="nofollow" class="effect-shine">BPS Kalimantan Tengah</a></li>
+							  <li><i class="bx bx-chevron-right"></i> <a href="https://kaltim.bps.go.id" target="_blank" rel="nofollow" class="effect-shine">BPS Kalimantan Timur</a></li>
+							  <li><i class="bx bx-chevron-right"></i> <a href="https://kaltara.bps.go.id" target="_blank" rel="nofollow" class="effect-shine">BPS Kalimantan Utara</a></li>
+                <li><i class="bx bx-chevron-right"></i> <a href="https://sulut.bps.go.id" target="_blank" rel="nofollow" class="effect-shine">BPS Sulawesi Utara</a></li>
+							  <li><i class="bx bx-chevron-right"></i> <a href="https://sulteng.bps.go.id" target="_blank" rel="nofollow" class="effect-shine">BPS Sulawesi Tengah</a></li>
+							  <li><i class="bx bx-chevron-right"></i> <a href="https://sulsel.bps.go.id" target="_blank" rel="nofollow" class="effect-shine">BPS Sulawesi Selatan</a></li>
+							  <li><i class="bx bx-chevron-right"></i> <a href="https://sultra.bps.go.id" target="_blank" rel="nofollow" class="effect-shine">BPS Sulawesi Tenggara</a></li>
+							  <li><i class="bx bx-chevron-right"></i> <a href="https://gorontalo.bps.go.id" target="_blank" rel="nofollow" class="effect-shine">BPS Gorontalo</a></li>
+							  <li><i class="bx bx-chevron-right"></i> <a href="https://sulbar.bps.go.id" target="_blank" rel="nofollow" class="effect-shine">BPS Sulawesi Barat</a></li>
+							  <li><i class="bx bx-chevron-right"></i> <a href="https://maluku.bps.go.id" target="_blank" rel="nofollow" class="effect-shine">BPS Maluku</a></li>
+							  <li><i class="bx bx-chevron-right"></i> <a href="https://malut.bps.go.id" target="_blank" rel="nofollow" class="effect-shine">BPS Maluku Utara</a></li>
+							  <li><i class="bx bx-chevron-right"></i> <a href="https://papuabarat.bps.go.id" target="_blank" rel="nofollow">BPS Papua Barat</a></li>
+							  <li><i class="bx bx-chevron-right"></i> <a href="https://papua.bps.go.id" target="_blank" rel="nofollow" class="effect-shine">BPS Papua</a></li>
+              </ul>
+            </div>
+
+            <div class="col-lg-2 col-md-6 footer-links">
+              <h4>Bank Indonesia</h4>
+              <ul>
+                <li><i class="bx bx-chevron-right"></i> <a href="https://www.bi.go.id/id/tentang-bi/profil/organisasi/Pages/Kantor-Perwakilan-Provinsi-Kalimantan-Selatan.aspx" target="_blank" rel="nofollow" class="effect-shine">KP Kalimantan Selatan</a></li>
+							  <li><i class="bx bx-chevron-right"></i> <a href="https://www.bi.go.id/id/tentang-bi/profil/organisasi/Pages/Kantor-Perwakilan-Kalimantan-Barat.aspx" target="_blank" rel="nofollow" class="effect-shine">KP Kalimantan Barat</a></li>
+							  <li><i class="bx bx-chevron-right"></i> <a href="https://www.bi.go.id/id/tentang-bi/profil/organisasi/Pages/Kantor-Perwakilan-Kalimantan-Tengah.aspx" target="_blank" rel="nofollow" class="effect-shine">KP Kalimantan Tengah</a></li>
+							  <li><i class="bx bx-chevron-right"></i> <a href="https://www.bi.go.id/id/tentang-bi/profil/organisasi/Pages/Kantor-Perwakilan-Provinsi-Kalimantan-Timur.aspx" target="_blank" rel="nofollow" class="effect-shine">KP Kalimantan Timur</a></li>
+							  <li><i class="bx bx-chevron-right"></i> <a href="https://www.bi.go.id/id/tentang-bi/profil/organisasi/Pages/Kantor-Perwakilan-Kalimantan-Utara.aspx" target="_blank" rel="nofollow" class="effect-shine">KP Kalimantan Utara</a></li>
+                <li><i class="bx bx-chevron-right"></i> <a href="https://www.bi.go.id/id/tentang-bi/profil/organisasi/Pages/Kantor-Perwakilan-Sulawesi-Utara.aspx" target="_blank" rel="nofollow" class="effect-shine">KP Sulawesi Utara</a></li>
+							  <li><i class="bx bx-chevron-right"></i> <a href="https://www.bi.go.id/id/tentang-bi/profil/organisasi/Pages/Kantor-Perwakilan-Sulawesi-Tengah.aspx" target="_blank" rel="nofollow" class="effect-shine">KP Sulawesi Tengah</a></li>
+							  <li><i class="bx bx-chevron-right"></i> <a href="https://www.bi.go.id/id/tentang-bi/profil/organisasi/Pages/Kantor-Perwakilan-Sulawesi-Selatan.aspx" target="_blank" rel="nofollow" class="effect-shine">KP Sulawesi Selatan</a></li>
+							  <li><i class="bx bx-chevron-right"></i> <a href="https://www.bi.go.id/id/tentang-bi/profil/organisasi/Pages/Kantor-Perwakilan-Sulawesi-Tenggara.aspx" target="_blank" rel="nofollow" class="effect-shine">KP Sulawesi Tenggara</a></li>
+							  <li><i class="bx bx-chevron-right"></i> <a href="https://www.bi.go.id/id/tentang-bi/profil/organisasi/Pages/Kantor-Perwakilan-Gorontalo.aspx" target="_blank" rel="nofollow" class="effect-shine">KP Gorontalo</a></li>
+							  <li><i class="bx bx-chevron-right"></i> <a href="https://www.bi.go.id/id/tentang-bi/profil/organisasi/Pages/Kantor-Perwakilan-Sulawesi-Barat.aspx" target="_blank" rel="nofollow" class="effect-shine">KP Sulawesi Barat</a></li>
+							  <li><i class="bx bx-chevron-right"></i> <a href="https://www.bi.go.id/id/tentang-bi/profil/organisasi/Pages/Kantor-Perwakilan-Provinsi-Maluku.aspx" target="_blank" rel="nofollow" class="effect-shine">KP Maluku</a></li>
+							  <li><i class="bx bx-chevron-right"></i> <a href="https://www.bi.go.id/id/tentang-bi/profil/organisasi/Pages/Kantor-Perwakilan-Maluku-Utara.aspx" target="_blank" rel="nofollow" class="effect-shine">KP Maluku Utara</a></li>
+							  <li><i class="bx bx-chevron-right"></i> <a href="https://www.bi.go.id/id/tentang-bi/profil/organisasi/Pages/Kantor-Perwakilan-Papua-Barat.aspx" target="_blank" rel="nofollow">KP Papua Barat</a></li>
+							  <li><i class="bx bx-chevron-right"></i> <a href="https://www.bi.go.id/id/tentang-bi/profil/organisasi/Pages/Kantor-Perwakilan-Papua.aspx" target="_blank" rel="nofollow" class="effect-shine">KP Papua</a></li>
+              </ul>
+            </div>
+  
+          </div>
+        </div>
+      </div>
+  
+      <div class="container">
+        <div class="copyright">
+          <span id="currentYear"></span> &copy; <strong><span>BPS Provinsi Sulawesi Tenggara</span></strong>. Semua Hak Dilindungi
+        </div>
+      </div>
+    </footer><!-- End Footer -->
+
+    <div id="preloader"></div>
+    <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+  
+    <!-- Vendor JS Files -->
+    <script src="assets/vendor/aos/aos.js"></script>
+    <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+    <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+    <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+    <script src="assets/vendor/php-email-form/validate.js"></script>
+  
+    <!-- Tambahan JS File -->
+    <script src="assets/js/main.js"></script>
+    <script src="assets/js/tabs.js"></script>
+    <script src="assets/js/owl-carousel.js"></script>
+    <script src="assets/js/isotope.min.js"></script>
+    <script>
+        function bannerSwitcher() {
+          next = $('.sec-1-input').filter(':checked').next('.sec-1-input');
+          if (next.length) next.prop('checked', true);
+          else $('.sec-1-input').first().prop('checked', true);
+        }
+    
+        var bannerTimer = setInterval(bannerSwitcher, 5000);
+    
+        $('nav .controls label').click(function() {
+          clearInterval(bannerTimer);
+          bannerTimer = setInterval(bannerSwitcher, 5000)
+        });
+    </script>
+    <script>
+      document.getElementById("currentYear").innerHTML = new Date().getFullYear();
+    </script>
+</body>
+</html>
